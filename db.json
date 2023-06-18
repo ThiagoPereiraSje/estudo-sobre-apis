@@ -1,0 +1,26 @@
+{
+  "alunos": [
+    {
+      "id": 1,
+      "nome": "Thiago Pereira",
+      "trilha": "Frontend"
+    },
+    {
+      "id": 2,
+      "nome": "Cassio",
+      "trilha": "Dados"
+    }
+  ],
+  "primos": [
+    {
+      "id": 1,
+      "nome": "Cassio",
+      "trilha": "Frontend"
+    },
+    {
+      "id": 2,
+      "nome":"Thiago Pereira",
+      "trilha": "Dados"
+    }
+  ]
+}
