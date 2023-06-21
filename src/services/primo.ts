@@ -1,5 +1,5 @@
-import { db } from "src/db";
-import { Primo } from "src/models/primo";
+import { db } from "../db";
+import { Primo } from "../models/primo";
 
 export function save(primo: Primo) {
   db.primos.push(primo);

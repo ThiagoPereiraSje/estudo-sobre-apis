@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import * as PrimoService from "src/services/primo"
+import * as PrimoService from "../services/primo"
 
 export function getAll(req: Request, res: Response) {
   try {

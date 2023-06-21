@@ -31,9 +31,7 @@ export function create(req: Request, res:Response) {
   try {
     console.log('body: ', req.body);
 
-    res.status(201).json({
-      estudante: undefined,
-    });
+    res.status(201).json(req.body);
   } catch (error) {
     res.status(400).json({
       message: 'Falha ao cadastrar os dados!'
