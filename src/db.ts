@@ -7,6 +7,10 @@ type Database = {
 }
 
 export const db: Database = {
-  estudantes: [],
-  primos: []
+  estudantes: [
+    {id: 1, nome: "Thiago", trilha: "Dados"}
+  ],
+  primos: [
+    {id: 1, nome: "Thiago", trilha: "Frontend"}
+  ]
 }

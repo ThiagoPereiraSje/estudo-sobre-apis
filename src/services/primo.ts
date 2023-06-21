@@ -13,3 +13,15 @@ export function get(id: number) {
 export function getAll() {
   return db.primos;
 }
+
+export function del(id: number) {
+  const newValue: Primo[] = []
+
+  db.primos.forEach(e => {
+    if (id !== e.id) {
+      newValue.push(e)
+    }
+  })
+
+  db.primos = newValue;
+}

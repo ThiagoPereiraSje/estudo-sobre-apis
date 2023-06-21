@@ -1,15 +1,30 @@
-import { db } from "src/db";
-import { Estudante } from "src/models/estudante";
+import { db } from "../db";
+import { Estudante } from "../models/estudante";
 
-export function save(estudante: Estudante) {
-  db.estudantes.push(estudante);
-  return { status: 'ok', message: 'Salvo com sucesso!'}
-}
+export default class EstudanteService {
 
-export function get(id: number) {
-  return db.estudantes.find(e => e.id === id);
-}
-
-export function getAll() {
-  return db.estudantes;
+  static save(estudante: Estudante) {
+    db.estudantes.push(estudante);
+    return { status: 'ok', message: 'Salvo com sucesso!'}
+  }
+  
+  static get(id: number) {
+    return db.estudantes.find(e => e.id === id);
+  }
+  
+  static getAll() {
+    return db.estudantes;
+  }
+  
+  static del(id: number) {
+    const newValue: Estudante[] = []
+  
+    db.estudantes.forEach(e => {
+      if (id !== e.id) {
+        newValue.push(e)
+      }
+    })
+  
+    db.estudantes = newValue;
+  }
 }
