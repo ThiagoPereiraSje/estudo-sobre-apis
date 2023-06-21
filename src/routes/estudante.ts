@@ -11,6 +11,7 @@ router.route("/")
 
 router.route("/:id")
   .get(EstudanteController.get)
+  .patch(EstudanteController.update)
   .delete(EstudanteController.del)
 
 

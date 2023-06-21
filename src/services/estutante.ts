@@ -7,6 +7,15 @@ export function save(estudante: Estudante) {
   return { status: 'ok', message: 'Salvo com sucesso!'}
 }
 
+export function update(id: number, dados: Estudante) {
+  db.estudantes = db.estudantes.map(e => {
+
+    if (e.id === id) return dados
+
+    return e
+  })
+}
+
 export function get(id: number) {
   return db.estudantes.find(e => e.id === id);
 }
