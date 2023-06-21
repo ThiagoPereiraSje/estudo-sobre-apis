@@ -1,7 +1,7 @@
 import express, { Express, Request, Response, json } from 'express'
 import dotenv from 'dotenv'
 
-import EstudanteController from './controller/estutante'
+import * as EstudanteController from './controller/estutante'
 
 
 dotenv.config();
