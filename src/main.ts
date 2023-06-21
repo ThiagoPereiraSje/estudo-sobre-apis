@@ -1,7 +1,7 @@
 import express, { Express, Request, Response, json } from 'express'
 import dotenv from 'dotenv'
 
-import * as EstudanteController from './controller/estutante'
+import estudanteRouter from './routes/estudante'
 
 
 dotenv.config();
@@ -16,13 +16,7 @@ app.get('/', async (req: Request, res: Response) => {
 })
 
 //localhost:3000/estudante
-app.route("/estudante")
-.get(EstudanteController.getAll)
-.post(EstudanteController.create)
-
-app.route("/estudante/:id")
-  .get(EstudanteController.get)
-  .delete(EstudanteController.del)
+app.use("/estudante", estudanteRouter);
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
